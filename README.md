@@ -1,6 +1,6 @@
 # RPN Triggered Object Tracking via LSTM
 
-**Author: Chengxi Li (cicelyli) , Ren Li (li2515)**
+**Author: Chengxi Li (cicelyli) , Ren Li (liren2515)**
 
 
 ## Goals:
@@ -8,7 +8,7 @@ Region Proposal Network(RPN) is firstly introduced by the paper Faster R-CNN whi
 
 Long Short-Term Memory networks (LSTM) is a recurrent neural network architecture that remembers values over arbitrary intervals. Due to this unique property, LSTM is especially suited to process time sequence signals with various duration like audios, videos etc. Inspired by this, we propose the LSTM may have potential in object tracking.
 
-In my proposed network, the RPN will generate proposals for the first frame of which I will only keep K highest scoring proposals. Then an LSTM will start tracking each of these proposals. The input to this LSTM will be slightly larger than the region predicted by it at the previous time step. So basically, the LSTM only needs to refine its input to snuggly fit whatever it is tracking. It will also produce a tracking confidence score which is a measure of how well it is tracking a given object.
+In our proposed network, the RPN will generate proposals for the first frame of which we will only keep K highest scoring proposals. Then an LSTM will start tracking each of these proposals. The input to this LSTM will be slightly larger than the region predicted by it at the previous time step. So basically, the LSTM only needs to refine its input to snuggly fit whatever it is tracking. It will also produce a tracking confidence score which is a measure of how well it is tracking a given object.
 
 1. Design a network architecture consisting of RPN and LSTM in order to do the object tracking.
 2. Train the net on a small subset of ILSVRC 2015 VID training dataset.
